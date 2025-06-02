@@ -1,14 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { useBearStore } from '../../store/use-bear-store';
-
-const UICard: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => {
-  return (
-    <div className="shadow-lg w-100 p-5">
-      <h3 className="text-red">{title}</h3>
-      {children}
-    </div>
-  );
-};
+import { useBearStore } from '@/store/use-bear-store';
+import { UICard } from '@/components/ui/ui-card';
 
 const DemoStore = () => {
   const { bears, increase } = useBearStore();
